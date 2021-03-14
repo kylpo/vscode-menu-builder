@@ -2,7 +2,7 @@
 
 Build custom command menus from your settings.json.
 
-![Custom Menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Custom-Menu.jpg)
+![Custom Menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Custom%20Menu.jpg)
 
 ![Submenu from previoul menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Submenu.jpg)
 
