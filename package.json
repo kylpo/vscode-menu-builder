@@ -1,0 +1,105 @@
+{
+  "name": "vscode-menu-builder",
+  "displayName": "Menu Builder",
+  "description": "Build custom menus of commands from your settings.json.",
+  "version": "1.0.0",
+  "publisher": "kylpo",
+  "license": "(MIT OR Apache-2.0)",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.menuBuilder"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.menuBuilder",
+        "title": "Menu Builder"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "extension.menuBuilder",
+          "when": "false"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Menu Builder",
+      "properties": {
+        "extension.menuBuilder": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "items"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Specifies the name and hotkey id of the menu"
+              },
+              "items": {
+                "type": "array",
+                "description": "Specifies the commands available in the menu",
+                "items": {
+                  "uniqueItems": true,
+                  "type": "object",
+                  "required": [
+                    "label",
+                    "command"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "command": {
+                      "type": "string"
+                    },
+                    "args": {
+                      "type": [
+                        "string",
+                        "object"
+                      ]
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.54.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
