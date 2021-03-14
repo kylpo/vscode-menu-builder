@@ -1,5 +1,8 @@
 # VSCode Extension: Menu Builder
 
+[![Version](https://vsmarketplacebadge.apphb.com/version-short/kylpo.vscode-menu-builder.svg)](https://marketplace.visualstudio.com/items?itemName=kylpo.vscode-menu-builder)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/kylpo.vscode-menu-builder.svg)](https://marketplace.visualstudio.com/items?itemName=kylpo.vscode-menu-builder)
+
 Build custom command menus from your settings.json.
 
 ![Custom Menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Custom%20Menu.jpg)
