@@ -1,10 +1,11 @@
 {
   "name": "vscode-menu-builder",
   "displayName": "Menu Builder",
-  "description": "Build custom menus of commands from your settings.json.",
+  "description": "Build custom command menus from your settings.json.",
   "version": "1.0.0",
   "publisher": "kylpo",
   "license": "(MIT OR Apache-2.0)",
+  "repository": "github:kylpo/vscode-menu-builder",
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -38,13 +39,13 @@
           "items": {
             "type": "object",
             "required": [
-              "name",
+              "id",
               "items"
             ],
             "properties": {
-              "name": {
+              "id": {
                 "type": "string",
-                "description": "Specifies the name and hotkey id of the menu"
+                "description": "Specifies the identifier of the menu"
               },
               "items": {
                 "type": "array",

@@ -8,7 +8,7 @@ type MenuItem = {
 };
 
 type Menu = {
-  name: string;
+  id: string;
   items: Array<MenuItem>;
 };
 
@@ -26,9 +26,9 @@ export function activate(context: vscode.ExtensionContext) {
 
   let disposable = vscode.commands.registerCommand(
     "extension.menuBuilder",
-    (menuName) => {
+    (menuId) => {
       // Abort if menu name is not specified in keybind's `args` property
-      if (menuName == null) {
+      if (menuId == null) {
         console.error(
           "calling extension.menuBuilder requires an `args` property with the menu name"
         );
@@ -36,10 +36,10 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       // Get the menu
-      const menu = menusFromConfig.find((menu) => menu.name === menuName);
+      const menu = menusFromConfig.find((menu) => menu.id === menuId);
       if (menu === undefined) {
         console.error(
-          `could not find "${menuName}" in your "extension.menuBuilder" configuration of settings.json`
+          `could not find "${menuId}" in your "extension.menuBuilder" configuration of settings.json`
         );
         return;
       }
