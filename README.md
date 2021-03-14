@@ -2,6 +2,10 @@
 
 Build custom command menus from your settings.json.
 
+![Custom Menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Custom-Menu.jpg)
+
+![Submenu from previoul menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Submenu.jpg)
+
 ## Features
 
 Credit for this extension's functionality and API go to **@maruruh** and [Quick Menu Builder](https://marketplace.visualstudio.com/items?itemName=maruruh.vscode-quick-menu-builder)!
@@ -11,8 +15,6 @@ I wrote this replacement extension for two reasons:
 - Add modern VSCode extension enhancements (like settings.json intellisense)
 - Open Source
   - [maruruh/vscode-quick-menu-builder](https://github.com/maruruh/vscode-quick-menu-builder) is curretly not public, and I don't like to rely on extensions that I can not make a fork/backup of. (I.e. I don't want the unpublishing of an extension from the VSCode Marketplace to affect me.)
-
-![Custom Menu](https://raw.githubusercontent.com/kylpo/vscode-menu-builder/main/assets/Custom-Menu.jpg)
 
 ## Extension Settings
 
@@ -36,7 +38,7 @@ Example [settings.json](https://code.visualstudio.com/docs/getstarted/settings#_
                 "description": "Switch comment lines",
                 "command": "editor.action.commentLine"
             },
-            // Note: this opens another menu (as a submenu)! 😎
+            // Note: this opens another menu (much like a submenu)! 😎
             {
                 "label": "Indent Submenu",
                 "command": "extension.menuBuilder",
