@@ -2,7 +2,7 @@
   "name": "vscode-menu-builder",
   "displayName": "Menu Builder",
   "description": "Build custom command menus from your settings.json.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "kylpo",
   "license": "(MIT OR Apache-2.0)",
   "repository": "https://github.com/kylpo/vscode-menu-builder",
